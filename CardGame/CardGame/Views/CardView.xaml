@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardGame.Views.CardView">
+    <ContentView.Content>
+        <Frame Margin="50" Padding="0" CornerRadius="10" HasShadow="False" BorderColor="Transparent" BackgroundColor="Wheat">
+            <Frame HasShadow="False" BackgroundColor="Wheat" Padding="0" Margin="10" CornerRadius="10" BorderColor="Black">
+                <Grid RowDefinitions="50,200,75" RowSpacing="0" Padding="0" Margin="0">
+                    <Frame Grid.Row="0" Padding="0" CornerRadius="0" HasShadow="False" BorderColor="Transparent" BackgroundColor="Transparent">
+                        <Label x:Name="lblCreatureName" Text="{Binding Creature.Name}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame Grid.Row="1" Padding="0" CornerRadius="0" HasShadow="False" BorderColor="Black" BackgroundColor="Transparent">
+                        <Grid>
+                            <StackLayout Padding="5" Grid.Row="0" Grid.Column="0">
+                                <Image x:Name="imgCreatureImage" Source="{Binding Creature.Image.Source}"/>
+                            </StackLayout>
+                            <StackLayout x:Name="stlyCost" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" VerticalOptions="Start"/>
+                        </Grid>
+                    </Frame>
+                    <Frame Grid.Row="2" Padding="0" CornerRadius="0" HasShadow="False" BorderColor="Transparent" BackgroundColor="Transparent">
+                        <Grid>
+                            <Label x:Name="lblCreatureAttack" Text="{Binding Creature.Attack}" Grid.Column="0" TextColor="Black"/>
+                            <StackLayout x:Name="stlyCreatureAbilities" Grid.Column="1"/>
+                            <Grid Grid.Column="2">
+                                <Image Source="heart.png" Grid.Column="0" Grid.Row="0" VerticalOptions="Start"/>
+                                <Label x:Name="lblCreatureHealth" Text="{Binding Creature.Health}" Grid.Column="0" Grid.Row="0" VerticalOptions="End" TextColor="Black"/>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </Frame>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

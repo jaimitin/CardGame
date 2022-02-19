@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CardGame.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace CardGame
         public MainPage()
         {
             InitializeComponent();
+            card.Creature = new Creature()
+            {
+                Name = "Cat",
+                Attack = 0,
+                Health = 2
+            };
         }
     }
 }

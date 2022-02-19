@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:CardGame.Views"
              x:Class="CardGame.MainPage">
 
     <StackLayout>
@@ -19,6 +20,11 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+
+        <models:CardView x:Name="card"/>
+
+        <Label Text="tes"/>
+
     </StackLayout>
 
 </ContentPage>
